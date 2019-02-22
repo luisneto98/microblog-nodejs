@@ -1,0 +1,20 @@
+{
+  "name": "nwitter",
+  "description": "minha primeira aplicação NodeJs",
+  "autor": "Luis Alves <alvesgamadossantos@gmail.com>",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "ejs": "^2.6.1",
+    "express": "^4.0.0",
+    "morgan": "~1.0.0",
+    "path-to-regexp": "^3.0.0",
+    "static-favicon": "~1.0.0"
+  }
+}
