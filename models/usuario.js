@@ -11,7 +11,7 @@ module.exports = function(){
         senha: {type: String, required: true, select: false}
     });
     
-    usuario.pre('save', function(next){
+    usuario.pre('save', async function(next){
         const hash = await bcrypt.hash(this.senha,10);
         this.senha = hash;
 
