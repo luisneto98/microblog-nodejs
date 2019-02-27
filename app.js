@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser')
 var session = require('express-session');
 var bodyParser = require('body-parser')
 
+//config conection db
 var mongoDB = 'mongodb://localhost:27017/nweet';
 mongoose.connect(mongoDB, {useNewUrlParser: true}).then(
     ()=> console.log('connected to db')
