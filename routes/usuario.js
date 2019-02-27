@@ -1,12 +1,9 @@
 module.exports = function(app){
     var usuario = app.controllers.usuario;
 
-    app.get("/usuario/login", isLoggedIn, usuario.login);
-    app.post("/usuario/login/processa", isLoggedIn, usuario.loginAction);
+    app.post("/usuario/authenticate", usuario.authenticate);
     app.get("/usuario/logout", usuario.logout);
-    app.get("/usuario/cadastro", usuario.cadastro);    
-    app.post("/usuario/cadastro/processa", usuario.cadastroAction);
-
+    app.post("/usuario/register", usuario.register);
 
 
 }
