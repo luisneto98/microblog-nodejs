@@ -4,9 +4,11 @@ var path = require('path');
 var load = require('express-load');
 var expressValidator = require("express-validator");
 var mongoose = require('mongoose');
-var cookieParser = require('cookie-parser')
+var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var cors = require('cors');
+
 
 //config conection db
 var mongoDB = 'mongodb://localhost:27017/nweet';
@@ -19,10 +21,11 @@ mongoose.connect(mongoDB, {useNewUrlParser: true}).then(
 var app = express();
     
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine','ejs');
 
+app.use(cors());
 app.use(expressValidator());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded())

@@ -17,11 +17,11 @@ module.exports = function(app){
                   const usuario = await usuarioModel.findOne({nickname}).select('+senha');
 
                   if(!usuario)
-                        return res.status(400).send({ error: 'User not found' })
+                        return res.status(200).send({ error: 'User not found' })
 
 
                   if(!await bcrypt.compare(senha, usuario.senha))
-                        return res.status(500).send({ error: 'Invalid password' });
+                        return res.status(200).send({ error: 'Invalid password' });
                   
                   
                   usuario.senha = undefined;

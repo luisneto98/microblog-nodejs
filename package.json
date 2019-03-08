@@ -3,6 +3,7 @@
   "description": "minha primeira aplicação NodeJs",
   "autor": "Luis Alves <alvesgamadossantos@gmail.com>",
   "version": "0.0.1",
+  "proxy": "http://api.teste.com.br",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -12,6 +13,7 @@
     "body-parser": "^1.18.3",
     "circular-json": "^0.5.9",
     "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
     "debug": "^4.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.0",
