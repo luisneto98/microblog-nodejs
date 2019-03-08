@@ -7,7 +7,7 @@ module.exports = function(app){
                   var errors = req.validationErrors();
 
                   if(errors){
-                        return res.status(500).send({ error: 'Invalid request' });
+                        return res.status(200).send({ error: 'Invalid request' });
                   }else{
                         try{
                               var nweetModel = app.models.nweet;

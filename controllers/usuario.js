@@ -52,7 +52,7 @@ module.exports = function(app){
                   req.assert('conf_senha', 'As senhas não são compatíveis').equals(req.body.senha);
                   var errors = req.validationErrors();
                   if(errors){
-                        return res.status(500).send({ error: 'Invalid request' })
+                        return res.status(200).send({ error: 'Invalid request' })
                   }else{
                         try{
                               var usuarioModel = app.models.usuario;
@@ -64,7 +64,7 @@ module.exports = function(app){
                               });
 
                         }catch(err){
-                              return res.status(400).send({ error: 'Registration failed' })
+                              return res.status(200).send({ error: 'Registration failed' })
                         }    
                   }
             }
